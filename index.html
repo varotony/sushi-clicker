@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="fi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron:wght@400..900&display=swap"
+            rel="stylesheet"
+        />
+        <title>Sushi no Click</title>
+    </head>
+    <body>
+        <!-- Efektit powerUp sekä reset nappia varten -->
+        <audio src="sounds/powerup.wav" id="powerSound" preload="auto"></audio>
+        <audio src="sounds/reset.wav" id="resetSound" preload="auto"></audio>
+
+        <div class="container">
+            <h1>Sushi no Click</h1>
+            <div class="row">
+                <div class="col-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <p class="fs-5">Points: <span id="pisteet">0</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <p class="fs-5">Multiplier: <span id="klikkausVoima">0</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 text center">
+                    <button id="klikattava">
+                        <img src="img/sushi.png" alt="sushi" />
+                    </button>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 text center">
+                    <button id="powerUpNappi">Buy multiplier (<span id="powerUpHinta">50</span> points)</button>
+                </div>
+            </div>
+        </div>
+        <button id="resetNappi">Reset</button>
+        <script src="main.js"></script>
+    </body>
+</html>
